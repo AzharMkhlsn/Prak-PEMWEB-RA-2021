@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>my website</title>
+        <style>
+            body{
+    
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           .black {background-color: rgb(5, 5, 5);}
+           .black {color: white;}
+        </style>
+       
+        <style type ="text/css">
+        .faktorial{
+         text-align: center;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .weather{
+            font-family: monospace;
+            color: rgb(5, 145, 28);
+        }
+        </style>
+    </head>
+    
+
+<body>
+        
+    <h3>Select Background</h3>
+    <p>white or black<p>
+        <button type="button" id="tema"> click me    
+        <script src="mg3.js"></script>
+         </button>
+   
+         
+   <div class="weather">
+    <form id="menu" onsubmit="return false">
+        <h4>How is the weather today?</h4>
+        <select id="choice"  onchange="choose()">
+          <option value="sunny">sunny</option>
+          <option value="rainny">rainny</option>
+        </select>
+       </form>
+       <div id="notif"></div>
+   <script type="text/javascript">
+    function choose(){
+      var weather=document.getElementById("menu").choice.value;
+      if (weather=="sunny")
+        {
+            document.getElementById("notif").innerHTML="have a good acticity and don't forget to buy ice!";
+        }
+      else if (weather=="rainny")
+        {
+            document.getElementById("notif").innerHTML="better stay at home!";
+        }
+    }
+   
+   </script>
+  </div>
+     
+     
+     <h4>Get Factorial</h4>
+     <p>Input Number</p>
+    <div class= "faktorial">
+    <form>
+        <input type= "" name="" id = "nilai">
+        <button type="btn" id="btn">get factorial</button>
+        <div id= "cari"></div>
+    </form>
+    <div id="tampil"></div>
+    <script type="text/javascript">
+        var nilai = document.getElementById("nilai");
+        var btn = document.getElementById("btn");
+        var cari = document.getElementById("cari");
+
+        btn.addEventListener("click", function(x){
+        x.preventDefault()
+        var n = nilai.value;
+        var hsl = 1;
+        for(var i=n; i>0; i--){
+            hsl *=i;
+        }
+        cari.innerHTML = `Faktorial from  ${n} is :  ${hsl}`;
+      })
+    </script>
+    </div>
+
+  </body>
+</html>
