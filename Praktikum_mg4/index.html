@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD Ajax</title>
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+
+
+        <button onclick="hal(1)">Lihat Data</button>
+        <button onclick="hal(2)">Isi Data</button>
+        <div id="CRUD"></div>
+
+        <script>
+            function hal(n){
+                $.ajax("hal" + n + ".php").done(function(data){
+                    $("#CRUD").html(data);
+                });
+            }
+        </script>
+    </body>
+    <footer>
+        <p>@copyright_Azhar Mukhlisin_119140180</p>
+    </footer>
+</html>
