@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD Ajax</title>
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+       
+            <link rel="stylesheet" href="style.css">
+        <p><h3>
+             <img src="Logo_ITERA.png" alt="ITERA" 
+            style="width:75px;height:75px;">
+            INSTITUT TEKNOLOGI SUMATERA
+        </h3>
+        </p>
+    
+        
+    </header>
+        <nav>
+            <link rel="stylesheet" href="style.css">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hal2.php">Form_Pendaftaran</a></li>
+                <li><a href="hal1.php">Data_Mahasiswa</a></li>
+                <div id="CRUD"></div>
+              
+              </ul>
+            </nav>
+            <script>
+                function hal(n){
+                    $.ajax("hal" + n + ".php").done(function(data){
+                        $("#CRUD").html(data);
+                    });
+                }
+            </script>  
+    <div style="display: flex;">
+        <main>
+            <p><center><h3>ITERA Membuka Pendaftaran Vaksin </h3> </center> </p>
+            <p><center><img src="Vaksin.jpg" alt="penulis" 
+                style="width:400px;height:400px;"></center></p>
+       
+          
+        </main> 
+        <content>
+            <p><center><h3>BERITA COVID</h3></center>
+                </p>
+                <p><center><img src="coviid.PNG" alt="covid"
+                    style="width:250px;height:150px;"></center></p>
+                    <p><center>
+                        <p>Untuk Melihat Seputar Berita Covid Silahkan Kunjungi Link Di Bawah Ini</p>
+            <p><a href="https://www.kompas.com/covid-19">kompas</a> </p>
+            <p><a href="https://www.liputan6.com/tag/covid-19">liputan6</a></p>
+            <p><a href="https://www.detik.com/tag/virus-corona">detik</a></p>
+                    </center></p>
+            
+        </content>
+    </div>
+        <footer>
+            <p><center>azhar mukhlisin_119140180</center></p>
+        </footer>
+    </body>
+</html>
