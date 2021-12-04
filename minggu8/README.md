@@ -1,5 +1,3 @@
-MINGGU 8
-
 Modifikasi yang dilakukan
 1. memindahkan CSS dan JS pada file yang terpisah 
 2. menambahkan fungsi logout
